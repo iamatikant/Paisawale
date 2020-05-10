@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
+import Signup from './components/App';
 
 ReactDOM.hydrate(
-  <App />,
-  document.getElementById('mountNode'),
+  <Signup />,
+  document.getElementById('root'),
 );

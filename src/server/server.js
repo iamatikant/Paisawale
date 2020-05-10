@@ -6,20 +6,10 @@ import App from '../components/App';
 const server = express();
 server.use(express.static('dist'));
 
-server.get('/', (req, res) => {
-  const initialMarkup = ReactDOMServer.renderToString(<App />);
+server.set('view engine', 'ejs');
 
-  res.send(`
-    <html>
-      <head>
-        <title>Sample React App</title>
-      </head>
-      <body>
-        <div id="mountNode">${initialMarkup}</div>
-        <script src="/main.js"></script>
-      </body>
-    </html>
-  `)
+server.get('/', (req, res) => {
+  res.render('index');
 });
 
 server.listen(4242, () => console.log('Server listening on port 4242'));
