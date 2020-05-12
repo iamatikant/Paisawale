@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Signup from './components/App';
+import Signup from './components/Signup';
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <Signup />,
   document.getElementById('root'),
 );
