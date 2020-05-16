@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class Signup extends Component {
-
   handleClick() {
     document.querySelector('.cont').classList.toggle('s--signup');
   };
